@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import Button from './Button';
 
 const Welcome = () => {
-  const handleClickWelcomePage = () => {};
-
   const [timeOut, setTimeOut] = useState(false);
 
   useEffect(() => {
