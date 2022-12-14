@@ -1,9 +1,5 @@
-import { useEffect, useState } from 'react';
-import { setSourceMapRange } from 'typescript';
-import Button from '../components/Button';
-import Form from '../components/Form';
+import { useState } from 'react';
 import GameHandler from '../components/Gamehandler';
-import AboutmeTitle from '../components/Title';
 import Winner from '../components/Winner';
 
 const Game = () => {

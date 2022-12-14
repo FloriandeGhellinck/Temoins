@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './Button';
-import { questions } from '../pages/game';
+import { questions } from './Gamehandler';
 
 const Rules = (props: any) => {
   const [timeOut, setTimeOut] = useState(false);
