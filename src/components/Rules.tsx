@@ -33,8 +33,10 @@ const Rules = () => {
           <br />
           <p>
             Tu peux répondre avec des majuscules ou des minuscules, cela ne
-            change strictement rien
+            change strictement rien.
           </p>
+          <br />
+          <p>Je te souhaite bonne chance !</p>
         </div>
         {timeOut && (
           <div className='h-24 flex items-center justify-center animate-bounce '>
