@@ -14,7 +14,7 @@ const Welcome = () => {
   return (
     <>
       {' '}
-      <div className='h-screen w-full items-center flex flex-col justify-center font-poppins'>
+      <div className='h-screen w-full items-center flex flex-col justify-center font-poppins lg:hidden'>
         <h1 className='text-3xl font-bold text-center text-embie-yellow-500   '>
           Salut à toi jeune entrepreneur
         </h1>

@@ -76,6 +76,12 @@ export const questions = [
   },
 ];
 
+const styles = [
+  'bg-embie-blue-dark-300 text-white',
+  'bg-embie-blue-light-800 text-white',
+  'bg-embie-blue-dark-500 text-white',
+];
+
 const GameHandler = ({ setScore, score }: any) => {
   //   const [score, setScore] = useState(0);
   const [step, setStep] = useState(0);
@@ -83,6 +89,9 @@ const GameHandler = ({ setScore, score }: any) => {
   const [formSubmitSuccesfull, setFormSubmitSuccesfull] = useState(false);
   const [showHintButton, setShowHintButton] = useState(true);
   const [showHint, setShowHint] = useState(false);
+  const [classStyle, setClassStyle] = useState(
+    'bg-embie-blue-dark-500 text-white'
+  );
 
   const handleAnswers = () => {
     let answer = value.toLowerCase().trim();
@@ -98,6 +107,7 @@ const GameHandler = ({ setScore, score }: any) => {
     setFormSubmitSuccesfull(false);
     setShowHintButton(true);
     setShowHint(false);
+    selectStyle();
   };
 
   const handleHintButton = () => {
@@ -124,10 +134,16 @@ const GameHandler = ({ setScore, score }: any) => {
     setValue(e.target.value);
   };
 
+  const selectStyle = () => {
+    setClassStyle(styles[Math.floor(Math.random() * 3)]);
+  };
+
   return (
-    <div className='h-screen w-screen bg-gray-100 flex flex-col items-center font-poppins justify-between pb-10'>
+    <div className='h-screen w-screen bg-gray-100 flex flex-col items-center font-poppins justify-between pb-40'>
       <AboutmeTitle title='GAME' />
-      <div className='text-justify w-10/12 h-fit bg-embie-blue-dark-500 text-white p-4 rounded-lg mt-7'>
+      <div
+        className={`text-justify w-10/12 h-fit  p-4 rounded-lg mt-7 ${classStyle}`}
+      >
         {questions.map((element, index) => {
           return index === step ? (
             <div className='text-center' key={element.numero}>

@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  Images: {
+    domains: ['localhost'],
+  },
 };
 
 module.exports = nextConfig;

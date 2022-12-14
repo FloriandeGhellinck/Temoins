@@ -11,7 +11,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='h-screen w-screen bg-gray-100'>
+      <main>
         <div>
           <Welcome />
         </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Button from './Button';
 import { questions } from './Gamehandler';
 
-const Rules = (props: any) => {
+const Rules = () => {
   const [timeOut, setTimeOut] = useState(false);
 
   useEffect(() => {
@@ -37,12 +37,12 @@ const Rules = (props: any) => {
           <br />
           <p>
             {
-              "Vérifie qu'il n'y a pas de fautes d'orthographe dans tes réponses. Autrement, ta réponse ne sera pas comptabilisée."
+              "Vérifie qu'il n'y ait pas de fautes d'orthographe dans tes réponses. Autrement, ta réponse ne sera pas comptabilisée."
             }
           </p>
           <br />{' '}
           <p>
-            {`Si tu as un doute, Tu peux cliquer sur "hint", mais attention que cela te retirera un demi point`}
+            {`Si tu as un doute, Tu peux cliquer sur "hint", mais attention que cela te retirera un demi point à chaque clic.`}
           </p>{' '}
           <br />
           <p>Je te souhaite bonne chance !</p>
