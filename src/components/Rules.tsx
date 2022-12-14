@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './Button';
 
@@ -36,10 +37,10 @@ const Rules = () => {
           </p>
         </div>
         {timeOut && (
-          <div className='h-32 flex items-center justify-center bg-transparent'>
-            <Button styles='inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-embie-yellow-500 to-embie-orange-600'>
+          <div className='h-24 flex items-center justify-center animate-bounce '>
+            <Button styles=' inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full text-white bg-embie-yellow-500'>
               {' '}
-              Je me lance
+              <Link href='/game'>Je me lance</Link>
             </Button>
           </div>
         )}
