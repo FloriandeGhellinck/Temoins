@@ -7,7 +7,7 @@ const Game = () => {
 
   return (
     <>
-      {score <= 5 && <GameHandler score={score} setScore={setScore} />}
+      {score < 5 && <GameHandler score={score} setScore={setScore} />}
       {score >= 5 && <Winner />}
       {/* <Image src='/temoinsPix.jpg' alt='image' fill /> */}
     </>
