@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './Button';
 
@@ -21,7 +22,7 @@ const Welcome = () => {
         </h1>
         {timeOut && (
           <Button styles='inline-flex items-center animate-bounce px-5 py-2 mt-10 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-embie-blue-dark-300'>
-            <a href='/startgame'>Clique pour jouer</a>
+            <Link href='/startgame'>Clique ici pour jouer</Link>
           </Button>
         )}
       </div>
