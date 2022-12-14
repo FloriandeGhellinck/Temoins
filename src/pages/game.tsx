@@ -7,7 +7,7 @@ import AboutmeTitle from '../components/Title';
 import Winner from '../components/Winner';
 
 const Game = () => {
-  const [score, setScore] = useState(6);
+  const [score, setScore] = useState(0);
 
   return (
     <>
