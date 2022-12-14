@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from './Button';
+import { questions } from '../pages/game';
 
-const Rules = () => {
+const Rules = (props: any) => {
   const [timeOut, setTimeOut] = useState(false);
 
   useEffect(() => {
@@ -11,6 +12,8 @@ const Rules = () => {
     }, 10000);
   });
 
+  const numOfQuestions = questions.length;
+
   return (
     <>
       <div className='font-poppins'>
@@ -18,7 +21,8 @@ const Rules = () => {
           <p>{"Cela fait maintenant pas mal d'années qu'on se connait. "}</p>{' '}
           <br />
           <p>
-            Nous allons faire un petit quiz afin de tester tes connaissances.{' '}
+            Nous allons faire un petit quiz afin de tester tes connaissances à
+            mon sujet.{' '}
           </p>{' '}
           <br />
           <p>
@@ -27,19 +31,24 @@ const Rules = () => {
           </p>{' '}
           <br />
           <p>
-            Chaque bonne réponse te rapportera un point. Il y a 10 questions en
-            tout. Il te faudra 7 points pour gagner la partie.{' '}
+            {`Chaque bonne réponse te rapportera un point. Il y a ${numOfQuestions} questions en
+            tout. Il te faudra 5 points pour gagner la partie.`}
           </p>{' '}
           <br />
           <p>
-            Tu peux répondre avec des majuscules ou des minuscules, cela ne
-            change strictement rien.
+            {
+              "Vérifie qu'il n'y a pas de fautes d'orthographe dans tes réponses. Autrement, ta réponse ne sera pas comptabilisée."
+            }
           </p>
+          <br />{' '}
+          <p>
+            {`Si tu as un doute, Tu peux cliquer sur "hint", mais attention que cela te retirera un demi point`}
+          </p>{' '}
           <br />
           <p>Je te souhaite bonne chance !</p>
         </div>
         {timeOut && (
-          <div className='h-24 flex items-center justify-center animate-bounce '>
+          <div className='h-24 flex items-center justify-center animate-bounce pt-4'>
             <Button styles=' inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full text-white bg-embie-yellow-500'>
               {' '}
               <Link href='/game'>Je me lance</Link>
