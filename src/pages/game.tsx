@@ -3,7 +3,7 @@ import GameHandler from '../components/Gamehandler';
 import Winner from '../components/Winner';
 import Image from 'next/image';
 const Game = () => {
-  const [score, setScore] = useState(6);
+  const [score, setScore] = useState(0);
 
   return (
     <>
