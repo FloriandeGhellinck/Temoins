@@ -2,7 +2,15 @@ import { useState } from 'react';
 import Button from './Button';
 import AboutmeTitle from './Title';
 
-export const questions = [
+type Question = {
+  numero: number;
+  question: string;
+  type: 'facile' | 'difficile';
+  tip: string;
+  reponse: string;
+};
+
+export const questions: Question[] = [
   {
     numero: 1,
     question: 'Où nous sommes-nous rencontrés ? ',
@@ -11,14 +19,14 @@ export const questions = [
     reponse: 'godinne',
   },
   {
-    numero: '2',
+    numero: 2,
     question: 'Quelle était mon cours préférée à l’école ? ',
     type: 'difficile',
     tip: 'faire du sport, en 3 lettres',
     reponse: 'gym',
   },
   {
-    numero: '3',
+    numero: 3,
     question:
       'De quelle marque était mon véhicule que j’avais pendant mes études ? ',
     type: 'facile',
@@ -26,49 +34,49 @@ export const questions = [
     reponse: 'renault',
   },
   {
-    numero: '4',
+    numero: 4,
     question: 'Quel est mon moyen de transport préféré ? ',
     type: 'facile',
     tip: 'mono...',
     reponse: 'monoroue',
   },
   {
-    numero: '5',
+    numero: 5,
     question: 'Où ai-je rencontré ma fiancée ? ',
     type: 'facile',
     tip: 'nom de la boite',
     reponse: 'jeux',
   },
   {
-    numero: '6',
+    numero: 6,
     question: 'Quel est mon sport préféré ? ',
     type: 'difficile',
     tip: 'Equipe, balle, stick',
     reponse: 'hockey',
   },
   {
-    numero: '7',
+    numero: 7,
     question: 'Combien de frères et soeurs j’ai ? ',
     type: 'facile',
     tip: '90 / 91 / 95',
     reponse: '2',
   },
   {
-    numero: '8',
+    numero: 8,
     question: 'Combien de langues est-ce que je sais parler ? ',
     type: 'facile',
     tip: 'ecole, langue maternelle + films',
     reponse: '3',
   },
   {
-    numero: '9',
+    numero: 9,
     question: 'Depuis combien de temps suis-je en couple avec ma fiancée ?',
     type: 'facile',
     tip: '2017',
     reponse: '5',
   },
   {
-    numero: '10',
+    numero: 10,
     question: 'Comment se prénome mon père ?',
     type: 'facile',
     tip: 'amo',
